@@ -1,5 +1,4 @@
 const express=require('express');
-const {json} = require("express");
 const {Constants} = require("./Constants");
 const {MongoClient} = require("mongodb");
 const app=express();
@@ -43,6 +42,27 @@ app.post("/register",async (req,res)=>{
         }
 
 });
+//endregion
+
+
+//region post /login
+
+/**
+ * input : username || password
+ * output: status
+ */
+app.post("/login",async (req,res)=>{
+    const username=req.body.username;
+    const password=req.body.password;
+
+    const user=database.collection("users");
+    const record= await user.findOne({username:username,password:password});
+
+
+    res.json({success:!record});
+
+});
+
 //endregion
 
 app.listen(PORT,function (err) {
