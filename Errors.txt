@@ -4,3 +4,8 @@ problem=> at run time localhost doesn't get converted to 127.0.0.1
 solution=> at the place of localhost in connection string write ip address 127.0.0.1
 
 2)NOTE=>await should always be used in an async function.
+
+3) NOTE=> modified  =>blue
+       => added     =>green
+       => not added =>red
+
