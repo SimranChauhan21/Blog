@@ -1,2 +1,6 @@
 1) runtime error while trying to connect to database
 Error: connect ECONNREFUSED ::1:27017
+problem=> at run time localhost doesn't get converted to 127.0.0.1
+solution=> at the place of localhost in connection string write ip address 127.0.0.1
+
+2)NOTE=>await should always be used in an async function.
